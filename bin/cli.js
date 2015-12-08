@@ -46,12 +46,12 @@ function readPackageData(global) {
   if (!packageData && fs.existsSync(optionsPath)) {
     var s = fs.readFileSync(optionsPath, 'utf8');
     packageData = JSON.parse(s);
-	if (global)	{
-	  _globalPackageData = packageData;
-	}
-	else {
+    if (global)	{
+      _globalPackageData = packageData;
+    }
+    else {
       _packageData = packageData;
-	}
+    }
   }
   return packageData || {};
 }
