@@ -1,9 +1,9 @@
 {
   "name": "organiq-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Organiq Comand Line Interface.",
   "bin": {
-    "organiq": "./bin/cli.js"
+    "organiq": "./bin/main.js"
   },
   "scripts": {
     "test": "jshint ./bin && mocha",
