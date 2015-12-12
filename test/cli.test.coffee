@@ -1,4 +1,4 @@
-acli = require '../bin/cli.js'
+acli = require '../lib/cli.js'
 # EventEmitter = require('events').EventEmitter
 
 
@@ -6,7 +6,7 @@ acli = require '../bin/cli.js'
 
 describe 'Task instance', ->
   task1 = task2 =
-	name: 'feed the cat'	  
+    name: 'feed the cat'	  
   it 'should have a name', ->
     task1.name = 'feed the cat'
     task1.name.should.equal 'feed the cat'

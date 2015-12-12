@@ -5,8 +5,8 @@
 
 var runCli = require('../lib/cli.js');
 
-console.log("from main.js");
+//console.log("from main.js");
 
 runCli();
 
-console.log("from main.js");
+//console.log("from main.js");
