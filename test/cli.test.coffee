@@ -1,40 +1,54 @@
-# Organiq = require '../../bin/deviceContainer'
+acli = require '../bin/cli.js'
 # EventEmitter = require('events').EventEmitter
 
 
 
 
-describe 'readPackageData', ->
+describe 'Task instance', ->
+  task1 = task2 =
+	name: 'feed the cat'	  
+  it 'should have a name', ->
+    task1.name = 'feed the cat'
+    task1.name.should.equal 'feed the cat'
 
-    it 'should'
 
+	
+	
+	
+	
+	
+	
+# describe 'readPackageData', ->
 
-describe '_responseToText', ->
-    testdata = null
-	statusMessage = null
-    beforeEach ->
-      testdata =
-        email: ['a@example.com','b@example.com','c@example.com']
-        non_field_errors: 2
-    it 'handles 200', ->
-      testResponse =
-        statusCode: 200
-        statusMessage: 'the status message'
-      result = _responseToText 
-      result.should.equal('expected')
-    it 'handles 400', ->
-      testResponse =
-        statusCode: 400
-        statusMessage: 'the status message'
-      result = pd.invoke('f')
-      result.should.equal('expected')
-	it 'handles 500', ->
-      testResponse =
-        statusCode: 500
-        statusMessage: 'the status message'
-      result = pd.invoke('f')
-      result.should.equal('expected')
-    it 'returns a string', ->
+    # it 'should'
+
+	
+# describe '_responseToText', ->
+    # testdata = null
+	# statusMessage = null
+    # beforeEach ->
+      # testdata =
+        # email: ['a@example.com','b@example.com','c@example.com']
+        # non_field_errors: 2
+    # it 'handles 200', ->
+      # testResponse =
+        # statusCode: 200
+        # statusMessage: 'the status message'
+      # result = _responseToText 
+      # result.should.equal('expected')
+    # it 'handles 400', ->
+      # testResponse =
+        # statusCode: 400
+        # statusMessage: 'the status message'
+      # result = pd.invoke('f')
+      # result.should.equal('expected')
+	# it 'handles 500', ->
+      # testResponse =
+        # statusCode: 500
+        # statusMessage: 'the status message'
+      # result = pd.invoke('f')
+      # result.should.equal('expected')
+    # it 'returns a string', ->
   
 
 

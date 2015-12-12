@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Organiq Comand Line Interface.",
   "bin": {
-    "organiq": "./bin/cli.js"
+    "organiq": "./bin/main.js"
   },
   "scripts": {
     "test": "jshint ./bin && mocha",
