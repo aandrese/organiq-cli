@@ -4,7 +4,15 @@ acli = rewire '../lib/cli.js'
 expect = require('chai').expect
 # EventEmitter = require('events').EventEmitter
 
-acli.__set__("path", "/dev/null")
+
+fsMock = writeFileSync: (path, data) ->
+  expect(path).to.equal '/dev/null'
+  expect(path).to.equal JSON.stringify(testPdata, null, 4)
+  return
+
+revert = acli.__set__
+  fs: fsMock
+  optionsPath: '/dev/null'
 
 
 describe 'writePackageData', ->
@@ -22,31 +30,6 @@ describe 'writePackageData', ->
     #'phony id','phoney secret')
   it 'should handle five arguments', ->
   it 'should set the local/global cache to null', ->
-
-describe 'readPackageData', ->
-  beforeEach ->  
-    testPdata = null
-  it 'should read the packageData from the local cache'
-    # rPdata = acli.readPackageData testPdata.apiRoot testPdata.dpiRoot
-    # result = ld.invoke('f')
-    # result.should.equal('expected')
-
-
-describe 'writePackageData', ->
-  testPdata = null
-  beforeEach ->
-    testPdata =
-      apiRoot: 0000
-      dpiRoot: 0001
-  it 'handles void argument list', ->
-    rPdata = readPackageData testPdata.apiRoot testPdata.dpiRoot
-    result = ld.invoke('f')
-    result.should.equal('expected')
-  it 'should handle a single argument', ->    
-  it 'should handle double argument', ->
-  it 'should read the packageData from the local cache'
-  it 'should read the optionsPath from the local cache'  
-  it 'should read the packageData from the file system'
 
 describe 'readPackageData', ->
   it 'should read the packageData from the local cache'
@@ -80,6 +63,18 @@ describe 'Task instance', ->
     task1.name.should.equal 'feed the cat'
 
 
+    
+    
+    
+    
+    
+revert()
+    
+    
+    
+    
+    
+    
 	
 	
 # describe 'runCli', ->
