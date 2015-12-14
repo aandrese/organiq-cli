@@ -23,7 +23,6 @@ describe 'writePackageData', ->
   it 'should handle five arguments', ->
   it 'should set the local/global cache to null', ->
 
-<<<<<<< HEAD
 describe 'readPackageData', ->
   beforeEach ->  
     testPdata = null
@@ -31,7 +30,6 @@ describe 'readPackageData', ->
     # rPdata = acli.readPackageData testPdata.apiRoot testPdata.dpiRoot
     # result = ld.invoke('f')
     # result.should.equal('expected')
-=======
 
 
 describe 'writePackageData', ->
@@ -52,7 +50,6 @@ describe 'writePackageData', ->
 
 describe 'readPackageData', ->
   it 'should read the packageData from the local cache'
->>>>>>> origin/work
   it 'should read the optionsPath from the local cache'  
   it 'should read the packageData from the file system'
   
